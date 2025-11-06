@@ -1,0 +1,53 @@
+def q1(): 
+    import math
+    lst=[]
+    lst1=[]
+    ans="y"
+    while ans=="y":
+        marks=int(input("Enter marks"))
+        lst.append(marks)
+        ans=input("Do you want to add more marks (y/n)")
+    for i in lst:
+        nmark=(i/max(lst))*100
+        lst1.append(math.trunc(nmark))
+    print(lst1)
+def q2():
+    lst=[]
+    lst1=[]
+    data=input("Enter name and designation:")
+    data=data.split(",")
+    for i in data:
+        lst.append(i.split(":"))
+    print(lst)
+def q3():
+    lst=[]
+    words=["apple","bat","balloon","sky","committee"]
+    for i in words:
+        for j in i:
+            if i.count(j)>=2:
+                lst.append(i)
+                break
+    print(lst)
+def q4():
+    lst=["i love programming" , "Python is powerful","Data science rocks"]
+    lst1=[]
+    for i in lst:
+        data=i.split()
+        for j in data:
+            lst1.append(len(j))
+            for k in lst1:
+                if k==max(lst1):
+                    if k==len(j):
+                        print(j,"is the longest word")
+qnum=int(input("Enter the question number (1-4)"))
+ans="y"
+while ans=="y":
+    if qnum==1:
+        q1()
+    elif qnum==2:
+        q2()
+    elif qnum==3:
+        q3()
+    elif qnum==4:
+        q4()
+    ans=input("Do you want get solutions for more questions(y/n)")
