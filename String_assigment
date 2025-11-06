@@ -1,0 +1,84 @@
+def q1():
+    str1=input("Enter a string")
+    str2=input("Enter second string")
+    str3=str1+str2
+    print("concated string is ",str3)
+def q2():
+    str1=input("Enter a string")
+    count=0
+    for i in str1:
+        count=count+1 
+    print("Length of the string",count)   
+    print("Length of the string ",len(str1))
+def q3():
+    str1=input("Enter first string")
+    str2=input("Enter second string")
+    if str1==str2:
+        print("Both strings are equal")
+    elif str1.lower()<str2.lower():
+        print("String 1 is greater than string 2")
+    elif str2.lower()>str1.lower():
+        print("String 2 is bigger than string 1")
+def q4():
+    str1=input("Enter the string")
+    copy=str1
+    print("Orginal string is ",str1)
+    print("Copy of orginal string is ",copy)  
+def q5():
+    ans="y"
+    while ans=="y":
+        str1=input("Enter a string")
+        start=int(input("Enter starting index"))
+        end=int(input("Enter ending index"))
+        substr1=str1[start:end]
+        print("The sub string of the given string is",substr1)
+        ans=input("Do you want to continue")
+def q6():
+    count=0
+    str1=input("Enter a string")
+    n=input("Enter a character to be searched")
+    for i in str1:
+        if n.lower()==str1.lower():
+            print('The first occurence of the character is',str1.index(n))
+            count=count+1
+            print("The number of occurences of the given character is ",count)
+        else:
+           print("Error")
+def q7():
+    str1=input("Enter a string")
+    char=input("Enter a character")
+    l=str1.split(char)
+    for i in l:
+        print(i,end="")
+def q8():
+    print("Who invented python")
+    ans=input("Enter answer")
+    if ans=="Guido van Rossum":
+        print("Excellent")
+    elif ans!="Guido van Rossum":
+        for i in range(0,3):
+            ans=input("Enter correct answer")
+            if ans=="Guido van Rossum":
+                break
+            else:
+                continue
+ans="y"
+while ans=="y":
+     qno=int(input("Enter numbers from 1 to 8 to get ouputs of repective questions"))
+     if qno==1:
+       q1()
+     elif qno==2:
+      q2()
+     elif qno==3:
+       q3()
+     elif qno==4:
+      q4()
+     elif qno==5:
+       q5()
+     elif qno==6:
+       q6()
+     elif qno==7:
+       q7()
+     elif qno==8:
+       q8()
+     ans=input("Do you want to get outputs of more questions?(y/n)")
