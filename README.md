@@ -1,2 +1,2 @@
-# Python_Project_1
+# Python_SimpleProjects_
 Contains , solutions to various logical problems
